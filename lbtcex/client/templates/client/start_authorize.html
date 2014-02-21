@@ -1,0 +1,15 @@
+{% extends "client/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Authorize with LocalBitcoins" %}</h1>
+
+<p>{% blocktrans %}You can use LocalBitcoins with this application by authorizing us with the button below.{% endblocktrans %}</p>
+
+<a href="{{ lbtc_url }}/oauth2/authorize/?client_id={{ client_id }}&response_type=code&state={{ state_token }}&scope=read write money_pin">
+  <button class="btn btn-large btn-primary">
+    {% trans "Authorize with LocalBitcoins" %}
+  </button>
+</a>
+{% endblock %}

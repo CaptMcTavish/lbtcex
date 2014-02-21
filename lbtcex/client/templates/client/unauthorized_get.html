@@ -1,0 +1,7 @@
+{% extends "client/base.html" %}
+
+{% block content %}
+<h1>Error: Possible CSRF</h1>
+
+<p>LocalBitcoins did not give us the same state token we set in the session. Make sure the session is set up correctly.</p>
+{% endblock %}
