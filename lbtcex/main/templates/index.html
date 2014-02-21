@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Welcome to <em>LBTCEX</em>!" %}</h1>
+
+<h2>{% trans "Log in" %}</h2>
+
+<form method="post" action="{% url "login" %}">
+  {% csrf_token %}
+  {{ login_form }}
+  <p>
+    <input type="submit" value="{% trans "Log in" %}" class="btn btn-large btn-primary">
+  </p>
+</form>
+
+<p>— or —</p>
+
+<h2>{% trans "Register" %}</h2>
+
+<form method="post" action="{% url "register" %}">
+  {% csrf_token %}
+  {{ register_form }}
+  <p>
+    <input type="submit" value="{% trans "Register" %}" class="btn btn-large btn-primary">
+  </p>
+</form>
+{% endblock %}

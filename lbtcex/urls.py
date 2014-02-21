@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^authorize/', include('lbtcex.client.urls')),
+    url(r'^', include('lbtex.main.urls'),
 )

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Log in" %}</h1>
+
+<form method="post" action="{% url "login" %}">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}">
+  {{ form }}
+  <p>
+    <input type="submit" value="{% trans "Log in" %}" class="btn btn-large btn-primary">
+  </p>
+</form>
+
+<p>
+  <a href="{% url "register" %}">{% trans "No account? Register" %}</a>
+</p>
+{% endblock %}
