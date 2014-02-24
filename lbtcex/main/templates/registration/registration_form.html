@@ -5,7 +5,7 @@
 {% block content %}
 <h1>{% trans "Register" %}</h1>
 
-<form method="post" action="{% url "register" %}">
+<form method="post" action="{% url "registration_register" %}">
   {% csrf_token %}
   {{ form }}
   <p>

@@ -7,7 +7,7 @@
 
 <h2>{% trans "Log in" %}</h2>
 
-<form method="post" action="{% url "login" %}">
+<form method="post" action="{% url "auth_login" %}">
   {% csrf_token %}
   {{ login_form }}
   <p>
@@ -19,9 +19,9 @@
 
 <h2>{% trans "Register" %}</h2>
 
-<form method="post" action="{% url "register" %}">
+<form method="post" action="{% url "registration_register" %}">
   {% csrf_token %}
-  {{ register_form }}
+  {{ registration_form }}
   <p>
     <input type="submit" value="{% trans "Register" %}" class="btn btn-large btn-primary">
   </p>

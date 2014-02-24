@@ -11,5 +11,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^authorize/', include('lbtcex.client.urls')),
     url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^', include('lbtex.main.urls'),
+    url(r'^', include('lbtcex.main.urls')),
 )
