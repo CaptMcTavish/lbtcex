@@ -36,6 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'registration',
+
+    'lbtcex.main',
+    'lbtcex.client',
 )
 
 MIDDLEWARE_CLASSES = (

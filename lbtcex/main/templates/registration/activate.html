@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Could not activate" %}</h1>
+
+<p>{% blocktrans %}Activating your account with the key <tt>{{ activation_key }}</tt> did not work. Make sure the activation key is correct. Possible issues: letters left off the end, linebreaks.{% endblocktrans %}</p>
+{% endblock %}

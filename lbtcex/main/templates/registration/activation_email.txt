@@ -1,0 +1,9 @@
+{% load i18n %}
+{% blocktrans with sitename=site.name %}You can activate your {{ sitename }} account by visiting the following link:{% endblocktrans %}
+
+http://{{ site.domain }}{% url "activate" %}?activation_key={{ activation_key }}
+
+{% blocktrans %}This link will expire in {{ expiration_days }} days. If you have not activated before that, you will have to register again.{% endblocktrans %}
+
+{% blocktrans with sitename=site.name %}Regards,
+{{ sitename }} administrators{% endblocktrans %}
