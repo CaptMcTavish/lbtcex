@@ -5,5 +5,12 @@
 {% block content %}
 <h1>{% trans "LBTCEX" %}</h1>
 
-<p>nt</p>
+{% if user.profile.access_token %}
+<p>{% trans "You have an access token!" %}</p>
+{% else %}
+{% url "start_authorize" as authorize_url %}
+<p>{% blocktrans %}You do not have an access token yet. <a href="{{ authorize_url }}">Authorize on LocalBitcoins now</a>.{% endblocktrans %}</p>
+{% endif %}
+
+<a href="{% url "auth_logout" %}">Log out</a>
 {% endblock %}

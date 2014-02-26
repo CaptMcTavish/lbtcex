@@ -5,7 +5,7 @@
 {% block content %}
 <h1>{% trans "Log in" %}</h1>
 
-<form method="post" action="{% url "login" %}">
+<form method="post" action="{% url "auth_login" %}">
   {% csrf_token %}
   <input type="hidden" name="next" value="{{ next }}">
   {{ form }}
@@ -15,6 +15,6 @@
 </form>
 
 <p>
-  <a href="{% url "register" %}">{% trans "No account? Register" %}</a>
+  <a href="{% url "registration_register" %}">{% trans "No account? Register" %}</a>
 </p>
 {% endblock %}

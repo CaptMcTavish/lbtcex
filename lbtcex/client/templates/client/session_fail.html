@@ -1,0 +1,8 @@
+{% extends "client/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Session did not work!" %}</h1>
+<p>{% blocktrans %}Our login session was ruined during authorization. Possible reasons could be: misconfiguration of session, session timeout, logout/login during authorization{% endblocktrans %}</p>
+{% endblock %}

@@ -89,3 +89,6 @@ STATIC_URL = '/static/'
 LBTC_URL = "https://www.localbitcoins.com"
 LBTC_CLIENT_ID = None
 LBTC_CLIENT_SECRET = None
+
+ACCOUNT_ACTIVATION_DAYS = 5
+LOGIN_REDIRECT_URL = "/"
