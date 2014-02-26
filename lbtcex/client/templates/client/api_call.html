@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "API Call" %}</h1>
+
+<p>{% trans "You can do arbitrary API calls here." %}</p>
+
+<form method="post" action="">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" class="btn btn-large btn-primary" value="{% trans "Call API" %}">
+</form>
+
+{% if result %}
+<h2>{% trans "Result" %}</h2>
+
+<p><tt>{{ result.status_code }}</tt></p>
+
+<pre>
+  {{ result_pretty_json }}
+</pre>
+{% endif %}
+
+{% endblock %}

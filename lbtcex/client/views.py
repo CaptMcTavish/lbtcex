@@ -6,6 +6,7 @@ from django.conf import settings
 
 import requests
 
+
 @login_required
 def start_authorize(request):
     state_token = os.urandom(16).encode("hex")

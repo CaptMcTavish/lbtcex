@@ -1,7 +1,11 @@
 {% extends "client/base.html" %}
 
-{% block content %}
-<h1>Success!</h1>
+{% load i18n %}
 
-<p>We are now authorized to use LocalBitcoins on your behalf.</p>
+{% block content %}
+<h1>{% trans "Success!"</h1>
+
+<p>{% trans "We are now authorized to use LocalBitcoins on your behalf." %}</p>
+
+<p><a href="/">{% trans "Proceed to Dashboard" %}</a></p>
 {% endblock %}
