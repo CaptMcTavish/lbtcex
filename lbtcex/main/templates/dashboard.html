@@ -7,7 +7,7 @@
 
 {% if user.profile.access_token %}
 {% url "api_call" as call_url %}
-<p>{% blocktrans %}You have an access token. <a href="{{ call_url }}">Do an API call!</a>{% endblocktrans %}</p>
+<p>{% blocktrans %}You have an access token. <a href="{{ call_url }}">Test API calls</a>{% endblocktrans %}</p>
 {% else %}
 {% url "start_authorize" as authorize_url %}
 <p>{% blocktrans %}You do not have an access token yet. <a href="{{ authorize_url }}">Authorize on LocalBitcoins now</a>.{% endblocktrans %}</p>
