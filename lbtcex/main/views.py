@@ -28,7 +28,7 @@ def api_call(request):
         opts = ApiCallForm(request.POST)
         if opts.is_valid():
             if opts.cleaned_data["data"]:
-                data = json.laods(opts.cleaned_data["data"])
+                data = json.loads(opts.cleaned_data["data"])
             else:
                 data = {}
 
