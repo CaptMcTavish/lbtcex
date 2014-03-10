@@ -2,18 +2,13 @@
 LocalBitcoins API test and example app
 ========================================
 
-:content: :local:
+This is a web-based API testing application for LocalBitcoins.
+It is based on Django and Python.
+
+.. contents :: :local:
 
 Setting up
 ===========
-
-.. note ::
-
-    If you are running several Django local development environments
-    on your computer at the same time, you cannot run them simultaneously.
-
-This is a web-based API testing application for LocalBitcoins.
-It is based on Django and Python.
 
 To set up::
 
@@ -81,7 +76,7 @@ Prerequisitement: You have a ``LOCAL_SELL`` (Sell bitcoins locally for cash) adv
 
 Path: ``/api/contact_create/{{AD_ID}}``
 
-Method: ``POST`
+Method: ``POST``
 
 Payload::
 
