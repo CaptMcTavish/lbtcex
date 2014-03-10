@@ -92,3 +92,7 @@ LBTC_CLIENT_SECRET = None
 
 ACCOUNT_ACTIVATION_DAYS = 5
 LOGIN_REDIRECT_URL = "/"
+
+# Don't conflict with other Django apps running locally
+SESSION_COOKIE_NAME = "testclient_session"
+CSRF_COOKIE_NAME = "testclient_csrf"
