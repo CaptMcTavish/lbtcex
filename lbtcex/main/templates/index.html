@@ -9,7 +9,7 @@
 
 <form method="post" action="{% url "auth_login" %}">
   {% csrf_token %}
-  {{ login_form }}
+  {{ login_form.as_p }}
   <p>
     <input type="submit" value="{% trans "Log in" %}" class="btn btn-large btn-primary">
   </p>
@@ -21,7 +21,7 @@
 
 <form method="post" action="{% url "registration_register" %}">
   {% csrf_token %}
-  {{ registration_form }}
+  {{ registration_form.as_p }}
   <p>
     <input type="submit" value="{% trans "Register" %}" class="btn btn-large btn-primary">
   </p>
