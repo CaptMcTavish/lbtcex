@@ -74,19 +74,37 @@ contact_create: Creating a buy bitcoins locally trade request
 
 Prerequisitement: You have a ``LOCAL_SELL`` (Sell bitcoins locally for cash) advertisement running on LocalBitcoins.
 
-Path: ``/api/contact_create/{{AD_ID}}``
+Path: ``/api/contact_create/{{AD_ID}}/``
 
 Method: ``POST``
 
 Payload::
 
-    {"amount":100.0, message:"Test"}
+    {"amount":100.0, "message":"Test"}
 
 Verifying the result:
 
 * Login to LocalBitcoins as the user who is running LOCAL_SELL ad
 
 * See that the new contact request appears in the notifications
+
+contact_messages: Poll for new messages in a contact
+----------------------------------------------------------------
+
+Prerequisitement: You have opened a  ``LOCAL_SELL`` contact with ``contact_create``.
+
+Path: ``/api/contact_messages/{{CONTACT_ID}}/``
+
+Method: ``GET``
+
+Payload: None
+
+Veryfying the result:
+
+* Send a reply as the advertiser of LOCAL_SELL trade to the contact chat
+
+* See that the chat reply comes through from API
+
 
 
 
