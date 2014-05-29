@@ -61,10 +61,16 @@ def catch_expired_token_and_retry(f):
 def api_get(request, path, params=None):
     headers = {"Authorization": "Bearer " + request.user.profile.access_token}
 
+    if not params: params = {}
+    params.update(access_token=request.user.profile.access_token)
+
     return requests.get(settings.LBTC_URL + path, params=params, headers=headers)
 
 @catch_expired_token_and_retry
 def api_post(request, path, data=None):
     headers = {"Authorization": "Bearer " + request.user.profile.access_token}
+
+    if not data: data = {}
+    data.update(access_token=request.user.profile.access_token)
 
     return requests.post(settings.LBTC_URL + path, data=data, headers=headers)
